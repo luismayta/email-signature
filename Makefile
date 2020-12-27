@@ -35,7 +35,7 @@ ROOT_DIR=$(shell pwd)
 MESSAGE:=🍺️
 MESSAGE_HAPPY:="Done! ${MESSAGE}, Now Happy Hacking"
 PROVISION_DIR:=$(ROOT_DIR)/provision
-FILE_README:=$(ROOT_DIR)/README.rst
+FILE_README:=$(ROOT_DIR)/README.md
 
 pipenv_install:=pipenv install
 
