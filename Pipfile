@@ -4,20 +4,36 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-ipdb = "*"
+docker-compose = "*"
+caniusepython3 = "*"
+isort = "*"
+mypy = "*"
+pycodestyle = "*"
+pydocstyle = "*"
+pylint = "*"
+mock = "*"
+pyhamcrest = "*"
+pytest-cov = "*"
+pytest = "*"
+tox = "*"
 ipython = "*"
-mock = ">=2.0.0"
-pytest-cov = ">=2.5.1"
-pytest = ">=3.2.2"
-testinfra = ">=1.19.0"
-tox = ">=2.9.1"
-PyHamcrest = ">=1.9.0"
-ansible = "*"
-docker-py = "*"
+parso = "*"
+pyyaml = "*"
+bumpversion = "*"
 pre-commit = "*"
-restview = "*"
+doc8 = "*"
+bridgecrew = "*"
+mkdocs = "*"
+click-man = "*"
+pygments = "*"
+pymdown-extensions = "*"
+mkdocs-material = "*"
 
 [packages]
 
+[scripts]
+test = "pytest"
+update = "pre-commit autoupdate"
+
 [requires]
-python_version = "3.7.3"
+python_version = "3.8.0"
