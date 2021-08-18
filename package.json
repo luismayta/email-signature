@@ -54,7 +54,7 @@
     "rimraf": "^3.0.2",
     "semantic-release": "^17.4.5",
     "shelljs": "^0.8.4",
-    "ts-node": "^9.1.1",
+    "ts-node": "^10.2.1",
     "mjml": "^4.10.2",
     "sendmail": "^1.6.1",
     "typescript": "^4.3.5"
