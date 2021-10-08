@@ -55,7 +55,7 @@
     "semantic-release": "^18.0.0",
     "shelljs": "^0.8.4",
     "ts-node": "^10.2.1",
-    "mjml": "^4.10.3",
+    "mjml": "^4.10.4",
     "sendmail": "^1.6.1",
     "typescript": "^4.4.3"
   },
