@@ -22,7 +22,7 @@
     "access": "restricted"
   },
   "engines": {
-    "node": ">=v12.22.11"
+    "node": ">=v12.22.12"
   },
   "husky": {
     "hooks": {
