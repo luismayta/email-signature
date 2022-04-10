@@ -1,63 +1,66 @@
 {
-  "keywords": [],
   "name": "@luismayta/email-signature",
-  "description": "email-signature for terraform",
-  "repository": "ssh://git@github.com/luismayta/email-signature.git",
+  "version": "0.0.0",
+  "description": "email-signature",
+  "main": "index.js",
   "author": "Luis Mayta <slovacus@gmail.com>",
-  "license": "MIT",
-  "stylintrc": ".stylintrc",
-  "version": "0.1.0",
+  "license": "LGPL-3.0",
+  "engines": {
+    "node": ">=14"
+  },
   "scripts": {
-    "clean": "rimraf dist .next out build",
-    "clean:all": "yarn clean node_modules",
-    "lint": "eslint -c ./.eslintrc.js ./ --ext .js,.jsx,.mjs,.d.ts,.ts,.tsx",
+    "lint": "eslint --config=.ci/linters/.eslintrc.js --ignore-path=.ci/linters/.eslintignore --ext .js,.jsx,.mjs,.d.ts,.ts,.tsx",
     "lint:fix": "yarn lint --fix",
-    "lint:less": "stylelint --config=.stylintrc --syntax less **/*.less",
+    "lint:less": "stylelint --config=.ci/linters/.stylintrc --syntax less **/*.less",
     "lint:less:fix": "yarn lint:less --fix",
-    "prettier:lint": "prettier '**/*.{js?(on),ts?(x),scss,md,y?(a)ml,gql,graphql?(s),less,mjml}' --write=false --list-different",
+    "ncu": "ncu -u --target minor",
+    "ncu:patch": "ncu -u --target patch",
+    "start": "gatsby develop",
+    "clean": "gatsby clean",
+    "build": "gatsby build --prefix-paths",
+    "serve": "gatsby serve --prefix-paths",
+    "prebuild": "yarn clean",
+    "prettier": "prettier --config=.ci/linters/prettier.config.js --ignore-path=.ci/linters/.prettierignore --list-different",
     "prettier:fix": "yarn prettier:lint --write=true",
-    "precommit": "lint-staged"
+    "prettier:lint": "yarn prettier '**/*.{js?(on),ts?(x),scss,md,y?(a)ml,gql,graphql?(s),less,mjml}' --write=false"
   },
   "publishConfig": {
-    "access": "restricted"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
-  "engines": {
-    "node": ">=v12.22.12"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luismayta/email-signature.git"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn precommit",
-      "commit-msg": "commitlint -c .commitlintrc.json -E HUSKY_GIT_PARAMS"
-    }
+  "keywords": [
+    "slides",
+    "hadenlabs"
+  ],
+  "bugs": {
+    "url": "https://github.com/luismayta/email-signature/issues"
+  },
+  "homepage": "https://github.com/luismayta/email-signature#readme",
+  "dependencies": {
+    "code-surfer": "^3.1.1",
+    "gatsby": "^2.24.92",
+    "gatsby-plugin-catch-links": "^2.3.15",
+    "gatsby-theme-mdx-deck": "^3.1.0",
+    "mdx-deck": "3.0.13",
+    "prismjs": "^1.25.0",
+    "react": "16.12.0",
+    "react-dom": "16.12.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.2.3",
-    "@commitlint/config-conventional": "^16.2.1",
-    "@equipindustry/eslint-config": "^0.3.4",
-    "@equipindustry/prettierrc": "^0.2.0",
-    "@types/jest": "^27.4.1",
-    "@types/mocha": "^9.1.0",
-    "@typescript-eslint/eslint-plugin": "^5.18.0",
-    "@typescript-eslint/parser": "^5.18.0",
-    "axios": "^0.26.1",
-    "babel": "^6.23.0",
-    "babel-eslint": "^10.1.0",
-    "cross-env": "^7.0.3",
-    "eslint": "==6.8.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "husky": "^6.0.0",
-    "lint-staged": "^12.3.7",
-    "node-plop": "^0.30.0",
-    "plop": "^3.0.5",
-    "prettier": "^2.6.2",
-    "prettier-tslint": "^0.4.2",
-    "rimraf": "^3.0.2",
-    "semantic-release": "^19.0.2",
-    "shelljs": "^0.8.5",
-    "ts-node": "^10.7.0",
-    "mjml": "^4.12.0",
-    "sendmail": "^1.6.1",
-    "typescript": "^4.6.3"
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "eslint": "^7.25.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-promise": "^5.1.1",
+    "prettier": "^2.2.1",
+    "website-pdf": "4.1.0",
+    "prettier-eslint": "^12.0.0"
   },
-  "dependencies": {}
+  "prettier": "./.ci/linters/prettier.config.js"
 }
