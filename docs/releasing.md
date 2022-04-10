@@ -1,19 +1,53 @@
+<!-- Space: Projects -->
+<!-- Parent: EmailSignature -->
+<!-- Title: Releasing EmailSignature -->
+
+<!-- Label: EmailSignature -->
+<!-- Label: Project -->
+<!-- Label: Releasing -->
+<!-- Include: disclaimer.md -->
+<!-- Include: ac:toc -->
+
 # Releasing
 
 ## Bump a new version
 
 Make a new version of email-signature in the following steps:
 
-- Make sure everything is commit to github.com.
-- Update `Changelog.rst` with the next version.
+### Generate version major
 
-```{.sh}
-bumplus -v $VERSION
+```bash
+task version:major
 ```
 
-- Dry Run: `bumpversion --dry-run --verbose --new-version 0.8.1 patch`
-- Do it: `bumpversion --new-version 0.8.1 patch`
-- \... or: `bumpversion --new-version 0.9.0 minor`
-- Push it: `git push --tags`
+### Generate version minor
 
-See the [bumpversion](https://pypi.org/project/bumpversion/) documentation for details.
+```bash
+task version:minor
+```
+
+### Generate version patch
+
+```bash
+task version:patch
+```
+
+## Generate Changelog
+
+### Generate Changelog Next Tag
+
+```bash
+task changelog:next APP_TAG={{tag}}
+```
+
+#### Parameters
+
+| Name     | Description   | sample | Required |
+| -------- | ------------- | ------ | :------: |
+| tag name | Name next tag | 0.1.0  |   yes    |
+
+### Generate Changelog Tag Now
+
+```bash
+task changelog:tag
+```

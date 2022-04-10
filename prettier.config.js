@@ -10,16 +10,16 @@ module.exports = {
     {
       files: '{*.js?(on),*.y?(a)ml,.*.js?(on),.*.y?(a)ml,*.md,.prettierrc,.stylelintrc,.babelrc}',
       options: {
-        tabWidth: 2,
-      },
+        tabWidth: 2
+      }
     },
     {
       files: '{**/.vscode/*.json,**/tsconfig.json,**/tsconfig.*.json,.stylelintrc}',
       options: {
         parser: 'json',
         quoteProps: 'preserve',
-        singleQuote: false,
-      },
+        singleQuote: false
+      }
     },
     {
       files: '*.md',
@@ -28,8 +28,8 @@ module.exports = {
         printWidth: 100,
         proseWrap: 'never',
         semi: false,
-        trailingComma: 'none',
-      },
+        trailingComma: 'none'
+      }
     },
     {
       files: '*.mdx',
@@ -37,22 +37,22 @@ module.exports = {
         printWidth: 100,
         proseWrap: 'never',
         semi: false,
-        trailingComma: 'none',
-      },
+        trailingComma: 'none'
+      }
     },
     {
       files: '*.{sass,scss}',
       options: {
-        parser: 'scss',
-      },
+        parser: 'scss'
+      }
     },
     {
       files: '*.less',
       options: {
         tabWidth: 4,
         printWidth: 80,
-        parser: 'less',
-      },
-    },
-  ],
+        parser: 'less'
+      }
+    }
+  ]
 }
