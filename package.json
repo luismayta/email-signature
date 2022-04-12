@@ -42,8 +42,8 @@
   "homepage": "https://github.com/luismayta/email-signature#readme",
   "dependencies": {
     "code-surfer": "^3.1.1",
-    "gatsby": "^2.24.92",
-    "gatsby-plugin-catch-links": "^2.3.15",
+    "gatsby": "^2.32.13",
+    "gatsby-plugin-catch-links": "^2.10.0",
     "gatsby-theme-mdx-deck": "^3.1.0",
     "mdx-deck": "3.1.0",
     "prismjs": "^1.27.0",
