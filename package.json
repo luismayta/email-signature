@@ -46,7 +46,7 @@
     "gatsby-plugin-catch-links": "^2.10.0",
     "gatsby-theme-mdx-deck": "^3.1.0",
     "mdx-deck": "3.1.0",
-    "prismjs": "^1.27.0",
+    "prismjs": "^1.30.0",
     "react": "16.14.0",
     "react-dom": "16.14.0"
   },
