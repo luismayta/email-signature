@@ -43,7 +43,7 @@
   "dependencies": {
     "code-surfer": "^3.1.1",
     "gatsby": "^2.32.13",
-    "gatsby-plugin-catch-links": "^2.10.0",
+    "gatsby-plugin-catch-links": "^3.15.0",
     "gatsby-theme-mdx-deck": "^3.1.0",
     "mdx-deck": "3.1.0",
     "prismjs": "^1.27.0",
